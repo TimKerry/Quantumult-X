@@ -1,0 +1,7 @@
+#!name=Spotify
+#!desc=去广告及功能增强
+
+https:\/\/(?:spclient\.wg|[a-z0-9]+-spclient)\.spotify\.com(?::443)?\/(?:ad-|gabo|pendragon|social) url reject
+https:\/\/(?:spclient\.wg|[a-z0-9]+-spclient)\.spotify\.com(?::443)?\/(user-customization-service|bootstrap) url 302 {{{Mock}}}/$1
+
+hostname = spclient.wg.spotify.com, g*-spclient.spotify.com
