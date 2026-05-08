@@ -1,0 +1,38 @@
+[rewrite_local]
+
+# ===== 拼多多开屏 =====
+^https?:\/\/api\.pinduoduo\.com\/api\/alpaca\/v2\/startup url reject-dict
+^https?:\/\/.*\/api\/shepherd\/startup_config url reject-dict
+
+# ===== 首页信息流广告 =====
+^https?:\/\/.*\/api\/falcon\/home\/feed url script-response-body https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/pdd/pdd_home.js
+^https?:\/\/.*\/proxy\/api\/api\/falcon\/home\/feed url script-response-body https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/pdd/pdd_home.js
+
+# ===== 百亿补贴/活动穿插 =====
+^https?:\/\/.*\/api\/marketing\/.* url reject-dict
+^https?:\/\/.*\/api\/operational\/.* url reject-dict
+^https?:\/\/.*\/api\/brandon\/.* url reject-dict
+
+# ===== 直播 =====
+^https?:\/\/.*\/live\/.* url reject
+^https?:\/\/.*\/api\/live\/.* url reject
+
+# ===== 首页悬浮 =====
+^https?:\/\/.*\/api\/floating\/.* url reject-dict
+^https?:\/\/.*\/api\/popup\/.* url reject-dict
+
+# ===== 个人页营销 =====
+^https?:\/\/.*\/api\/mine\/.*ad.* url reject-dict
+^https?:\/\/.*\/api\/user\/.*banner.* url reject-dict
+
+# ===== 搜索热榜 =====
+^https?:\/\/.*\/search_hot.* url reject-dict
+
+# ===== 商品详情推荐 =====
+^https?:\/\/.*\/recommendation\/.* url reject-dict
+
+# ===== 消息推送 =====
+^https?:\/\/.*\/api\/push\/.* url reject
+
+[mitm]
+hostname = *.pinduoduo.com, api.pinduoduo.com
