@@ -1,0 +1,8 @@
+{
+  "name": "Tim Kerry",
+  "description": "收集一些自用的定时任务，更新日期：2025-09-21 00:11:00",
+  "raw": "https://raw.githubusercontent.com/fmz200/wool_scripts/refs/heads/main/QuantumultX/tasks/fmz200_tasks.json",
+  "task": [
+    "0 8 * * * https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/oil_price.js, tag=今日油价, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/oil.png, enabled=true"
+  ]
+}
